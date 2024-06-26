@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Password Protected</title>
+    <link id="theme-link" rel="stylesheet" href="assets/css/light.css">
 </head>
 <body>
-    <div id="content" style="display: none;">
-        <h2>Welcome!</h2>
-        <p>You have successfully logged in.</p>
-    </div>
-    <div id="login-form">
-        <h2>Login</h2>
-        <div class="input-container">
-            <input type="password" id="password" placeholder="Enter your password">
-            <span id="toggle-password" class="eye-icon">👁️</span>
+    <img src="/assets/images/darkmode.svg" id="theme-toggle" alt="Dark Mode">
+    <div class="content">
+        <div id="content" style="display: none;">
+            <h2>Welcome!</h2>
+            <p>You have successfully logged in.</p>
         </div>
-        <button type="button" onclick="checkPassword()">Login</button>
+        <div id="login-form">
+            <h2>Login</h2>
+            <div class="input-container">
+                <input type="password" id="password" placeholder="Enter your password">
+                <img id="toggle-password" class="eye-icon" type="button" src="/assets/images/on.svg" alt="Show Password">
+            </div>
+            <button type="button" onclick="checkPassword()">Login</button>
+        </div>
+        <script src="script.js"></script>
     </div>
-    <script src="/assets/js/script.js"></script>
+    <script src="theme.js"></script>
 </body>
 </html>
